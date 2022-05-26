@@ -37,15 +37,16 @@ class App extends Component {
   ]
 
   const calculatorButtonsRender = calculatorBtns.map((btn,indx)=>{
-    if (btn.text==='0')
-    return(
-      <Button 
-      style={{width: '100%', gridColumn:'1 / 3'}} key={indx} classes={btn.style}
+
+    return (
+
+    btn.text==='0' ? 
+      <Button style={{width: '100%', gridColumn:'1 / 3'}} key={indx} classes={btn.style}
       text={btn.text} buttonClick={this.buttonClick}></Button>
-      )
-    else return(
+    :  
       <Button key={indx} classes={btn.style} text={btn.text}
-      buttonClick={this.buttonClick}></Button>)
+      buttonClick={this.buttonClick}></Button>
+)
   })
 
 
