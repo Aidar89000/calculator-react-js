@@ -1,0 +1,41 @@
+.calculator__buttons__button, .button-numbs, .button-math-symbols, .button-special-symbols{
+    width:100%;
+    height:100%;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #323232;
+    color:#000000;
+    margin-top: 10px;
+    margin: 0 auto;
+    font-size: 25px;
+    transition: ease .3s;
+}
+
+.button-numbs,.button-math-symbols{
+    color: white
+}
+
+.button-math-symbols{
+    background-color: #fe9400;
+}
+
+.button-special-symbols{
+    background-color: #a5a5a5
+}
+
+.button-numbs:hover{
+    background-color: #696868;
+    transition: ease .3s;
+}
+
+.button-math-symbols:hover{
+    background-color:  #fdb857;
+    transition: ease .3s;
+}
+
+.button-special-symbols:hover{
+    background-color: #c7c7c7;
+    transition: ease .3s;
+}
