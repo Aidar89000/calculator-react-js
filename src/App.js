@@ -36,6 +36,18 @@ class App extends Component {
       {text: '0',style: 'button-numbs'},{text: '.',style: 'button-numbs'},{text: '=',style: 'button-math-symbols'},
   ]
 
+  const calculatorButtonsRender = calculatorBtns.map((btn,indx)=>{
+    if (btn.text==='0')
+    return(
+      <Button 
+      style={{width: '100%', gridColumn:'1 / 3'}} key={indx} classes={btn.style}
+      text={btn.text} buttonClick={this.buttonClick}></Button>
+      )
+    else return(
+      <Button key={indx} classes={btn.style} text={btn.text}
+      buttonClick={this.buttonClick}></Button>)
+  })
+
 
   return (
       <div className="App">
@@ -43,17 +55,7 @@ class App extends Component {
           <input type="text" className='calculator__display' readOnly/>
 
           <div className='calculator__buttons'>
-            {calculatorBtns.map((btn,indx)=>{
-              if (btn.text==='0')
-              return(
-                <Button 
-                style={{width: '100%', gridColumn:'1 / 3'}} key={indx} classes={btn.style}
-                text={btn.text} buttonClick={this.buttonClick}></Button>
-                )
-              else return(
-                <Button key={indx} classes={btn.style} text={btn.text}
-                buttonClick={this.buttonClick}></Button>)
-            })}
+            {calculatorButtonsRender}
           </div>
           
         </div>
